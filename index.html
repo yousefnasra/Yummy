@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Yummy</title>
+    <!-- logo -->
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
+    <!-- Icons -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen"
+        class="position-fixed top-0 bottom-0 start-0 end-0 bg-black justify-content-center align-items-center">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+    <!-- Side Nav -->
+    <div id="sideNav" class="min-vh-100 position-fixed d-flex top-0">
+        <div id="navLinks" class="min-vh-100 d-flex flex-column justify-content-between p-4 bg-black">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden">
+                    <li onclick="showSearchInputs(); closeSideNav()" class="position-relative cursor-pointer">Search
+                    </li>
+                    <li onclick="getCategories(); closeSideNav()" class="position-relative cursor-pointer">Categories
+                    </li>
+                    <li onclick="getArea(); closeSideNav()" class="position-relative cursor-pointer">Area</li>
+                    <li onclick="getIngredients(); closeSideNav()" class="position-relative cursor-pointer">Ingredients
+                    </li>
+                    <li onclick="showContacts(); closeSideNav()" class="position-relative cursor-pointer">Contact Us
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="nav-footer">
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="footer">
+                        <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="navHeader"
+            class="d-flex flex-column justify-content-between px-2 py-4 bg-white text-black text-center">
+            <img src="imgs/logo.png" alt="logo">
+            <i class="open-close-icon fa-solid fa-2x"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Search Container -->
+    <div id="searchContainer" class="container w-75"></div>
+    <!-- Display Data -->
+    <div class="min-vh-100 position-relative">
+        <div id="innerLoadingScreen" class="top-0 start-0 end-0 bottom-0 justify-content-center align-items-center">
+            <i class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+        <div class="container">
+            <div id="rowData" class="row py-5 g-4"></div>
+        </div>
+    </div>
+    <script src="js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
